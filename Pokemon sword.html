@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title> Pokemon sword</title>
+  </head>
+  <body>
+
+    <style>
+        body {
+            background-image: url("pokemon_SwordShield.");
+            background-repeat: no-repeat;
+            background-attachment: fixed; 
+            background-size: 100% 100%;
+        }
+
+        .header::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+/* =========== Header ============ */
+
+.navigation {
+  position: relative;
+  padding: 1.5rem 0;
+  z-index: 100;
+}
+
+.fix__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--white);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav__center .nav__hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.nav__menu .menu__top {
+  display: none;
+}
+
+.nav__center {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+}
+
+.nav__header .nav__logo h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.fix__nav .nav__logo h1 {
+  color: var(--dark-color);
+}
+
+.nav__header .nav__logo h1 span {
+  color: var(--default-color);
+}
+
+.nav__icons svg {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+.nav__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__menu .nav__list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+}
+
+.nav__list .nav__item:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.nav__item .nav__link:link,
+.nav__item .nav__link:visited {
+  display: inline-block;
+  padding: 1rem;
+  color: var(--grey-color);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  transition: all 300ms ease-in-out;
+}
+
+.fix__nav .nav__item .nav__link:link,
+.fix__nav .nav__item .nav__link:visited {
+  color: var(--dark-color);
+}
+
+.nav__item .nav__link:hover {
+  color: var(--default-color);
+}
+
+.fix__nav .nav__item .nav__link:hover {
+  color: var(--default-color);
+}
+
+.nav__menu .nav__item:last-child .nav__link {
+  background-color: var(--default-color);
+  padding: 0.8rem 3rem;
+  border-radius: 10rem;
+  border: 1px solid var(--default-color);
+  transition: all 300ms ease-in-out;
+}
+
+.nav__menu .nav__item:last-child .nav__link:hover {
+  background-color: transparent;
+  color: var(--grey-color);
+}
+
+.fix__nav .nav__menu .nav__item:last-child .nav__link:hover {
+  color: var(--default-color);
+}
+
+.nav__icons {
+  display: flex;
+  align-items: center;
+}
+
+.nav__icons .icon__item {
+  color: var(--grey-color);
+  padding: 1rem;
+}
+
+.nav__icons .icon__item svg {
+  fill: var(--grey-color);
+}
+
+.fix__nav .nav__icons .icon__item svg {
+  fill: var(--dark-color);
+}
+
+.nav__icons .icon__item:last-child {
+  position: relative;
+  background-color: var(--grey-color-alt);
+  padding: 0.7rem 1rem;
+  border-radius: 5rem;
+}
+
+.nav__icons .icon__item:last-child span {
+  position: absolute;
+  background-color: var(--default-color);
+  display: inline-block;
+  top: -0.6rem;
+  right: -1rem;
+  border-radius: 50%;
+  padding: 0.1rem 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+p {
+  margin: 5px 50px 75px 500px;
+}
+
+h6 {
+    margin-top: 10px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+h5{
+    margin-top: 10px;
+    font-family: "Times New Roman", Times, serif;
+}
+
+h4 {
+    margin: 40px 5px 5px 25px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+}
+
+h3 {
+    margin-top: 30px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 30px;
+}
+
+.carousel {
+  width:640px;
+  height:360px;
+  margin-left: 600px;
+  margin-bottom: 25px;
+}
+
+h2 {
+    margin-left: 25px;
+}
+
+h1 {
+    font-size: 15px;
+    margin-left: 25px;
+}
+
+
+    </style>
+  </head>
+  <body>
+ 
+
+    <header id="header" class="header">
+      <!-- Navigation -->
+      <div class="navigation">
+        <div class="container">
+          <nav class="nav__center">
+            <div class="nav__header">
+              <div class="nav__logo">
+                <h1>Gamers<span>HQ</span></h1>
+              </div>
+  
+              <div class="nav__hamburger">
+                <span>
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#icon-menu"></use>
+                  </svg>
+                </span>
+              </div>
+            </div>
+  
+            <div class="nav__menu">
+              <div class="menu__top">
+                <h1 class="nav__category">Gamers<span>HQ</span></h1>
+                <div class="close__toggle">
+                  <svg>
+                    <use xlink:href="./images/sprite.svg#icon-cross"></use>
+                  </svg>
+                </div>
+              </div>
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="E-commerce site.Html" class="nav__link scroll-link">Home</a>
+                </li>
+  
+                <li class="nav__item">
+                  <a href="Featured.html" class="nav__link scroll-link">Featured</a>
+                </li>
+  
+                <li class="nav__item">
+                  <a href="Blog.html" class="nav__link scroll-link">Help</a>
+                </li>
+  
+                <li class="nav__item">
+                  <a href="#newsletter" class="nav__link scroll-link">Subscribe</a>
+                </li>
+  
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+
+    <div style="clear: left;">
+        <p style="float: left;"><img src="Pokemon sword.jpg" width="300"></p>
+        <h4> Pokemon Sword </h4>
+        <h5>Game Freak</h5>
+        <h6>Nintendo</h6>
+        <h3>£40</h3>
+
+        <button type="button" class="btn btn-primary">Add to basket</button>
+        <button type="button" class="btn btn-primary">Add to wishlist</button>
+   
+    </div>
+    
+    <p>Free UK delivery</p>
+
+    <div>
+        <p>"...a complete joy to play."
+            
+            - IGN (9.3/10) 
+            
+            <br>
+
+            "...an outstanding new installment..."
+
+            - Game Informer (8.75/10)
+
+            <br>
+
+            "...stunning..."
+
+            - GameSpot (9/10)
+        </p>
+            
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h2>Get ready for the next Pokémon adventure in the Pokémon™ Sword and Pokémon™ Shield games.</h2>
+    <h1>A new generation of Pokémon is coming to the Nintendo Switch™ system. Begin your adventure as a Pokémon Trainer by choosing one of three new partner Pokémon: Grookey, Scorbunny, or Sobble. Then embark on a journey in the new Galar region, where you’ll challenge the troublemakers of Team Yell, while unraveling the mystery behind the Legendary Pokémon Zacian and Zamazenta! Explore the Wild Area, a vast expanse of land where the player can freely control the camera. Team up with three other players locally or online in the new multiplayer co-op Max Raid Battles* in which players will face off against gigantic and super-strong Pokémon known as Dynamax Pokémon.
+
+      <br>
+      <br>
+      
+      Certain Pokémon can even Gigantamax to gain a new look and a powerful set of G-Max moves. But there’s more to being a champion than honing your battle skills: you can pick your own clothes and get a new hairdo while visiting the stores in town, so you can be the trainer you want to be. Throughout your journey, you’ll encounter newly discovered Pokémon as well as familiar ones that will look a little different in their new Galarian forms! For another way to level up your Pokémon, assign them Poké Jobs to complete, and for fun, you can even play with your Pokémon in Pokémon Camp!</h1>
+
+
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 6"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 7"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 8"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 9"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="10" aria-label="Slide 10"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="11" aria-label="Slide 11"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="12" aria-label="Slide 12"></button>
+
+
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="PokemonSWSH.jpg" class="d-block w-100" alt="Pokemon Sword and Shield">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Pokemon Sword and Shield</h5>
+              <p>Explore the Galar reigon with your new pokemon you discover</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="Pikachu.jpg" class="d-block w-100" alt="Pokemon Sword and Shield expansion">
+          </div>
+          <div class="carousel-item">
+            <img src="Leon.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Alcremie.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Marnie.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Sirfetch'd.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Battle.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Store.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="RaidDen.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="WildArea.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="PikachuCoppy.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="WildArea.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="Meowth.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden"></span>
+        </button>
+      </div>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <h2>contact us!</h2>
+
+      <h3><b>View the status of your order </b></h3>
+
+        <h4><a href="Blog.html"><u>View your account here</a></u></h4>
+
+      <h3><b>Coronavirus (Covid-19) Customer Information</h3>
+
+        <h4><a href="Blog.html"><u>Coronavirus (Covid-19) Customer Information </a></u></h4>
+
+        <h3><b>Contact Online Customer Services</h3>
+
+          <h4><a href="Blog.html"><u>Contact Online Customer Services</a></u></h4>
+
+          <h3><b>Contact a shop</h3>
+
+            <h4><a href="Blog.html"><u>Contact one of our shops</a></u></h4>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+
+  </body>
+</html>
